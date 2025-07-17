@@ -3,6 +3,88 @@ import Link from "next/link"
 import Button from "@/components/ui/button"
 import { Plane, Cloud, X, Youtube } from "lucide-react"
 
+// SEO Metadata for the page [^1][^2]
+export const metadata = {
+  title: "Journve - Your Smartest Travel Companion Awaits",
+  description:
+    "Journve: No chaos. No clutter. Just travel, made simple. The smartest travel companion app is coming soon!",
+  keywords: [
+    "Journve",
+    "travel companion",
+    "smart travel",
+    "travel app",
+    "coming soon",
+    "travel planning",
+    "trip organizer",
+    "simple travel",
+    "no chaos travel",
+    "no clutter travel",
+    "travel made simple",
+    "new travel app",
+    "future travel",
+    "travel technology",
+    "travel assistant",
+    "journey planner",
+    "vacation planner",
+    "travel guide",
+    "travel management",
+    "digital nomad",
+    "adventure travel",
+    "explore",
+    "destination",
+    "travel tips",
+    "trip planning",
+    "travel itinerary",
+    "travel app",
+    "travel companion",
+    "travel management",
+    "travel expense tracker",
+    "trip budget",
+    "expense splitting",
+    "travel budget planner",
+    "group expense sharing",
+    "travel cost calculator",
+    "travel journal",
+    "trip diary",
+    "travel memories",
+    "vacation journal",
+    "travel blog",
+    "trip documentation",
+    "solo travel",
+    "group travel",
+    "travel planning tools",
+    "smart travel",
+    "travel technology",
+  ],
+  openGraph: {
+    title: "Journve - Your Smartest Travel Companion Awaits",
+    description:
+      "Journve: No chaos. No clutter. Just travel, made simple. The smartest travel companion app is coming soon!",
+    url: "https://journve-v1.vercel.app/", // Replace with your actual domain when deployed
+    siteName: "Journve",
+    images: [
+      {
+        url: "/journve-logo.png", // Use your existing logo for social media previews
+        width: 800,
+        height: 600,
+        alt: "Journve Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Journve - Your Smartest Travel Companion Awaits",
+    description:
+      "Journve: No chaos. No clutter. Just travel, made simple. The smartest travel companion app is coming soon!",
+    images: ["/journve-logo.png"],
+  },
+  icons: {
+    icon: "/icon.png", // Favicon for the browser tab
+    apple: "/icon.png", // Apple touch icon
+  },
+}
+
 export default function ComingSoonPage() {
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 to-gray-900 text-gray-50">
@@ -10,7 +92,13 @@ export default function ComingSoonPage() {
       <header className="absolute top-0 left-0 w-full p-6 z-20 flex justify-between items-center">
         {/* Empty div for spacing on the left to help center the logo */}
         <div className="w-20 h-20"></div>
-        <Image src="/journve-logo.png" alt="Journve Logo" width={80} height={80} className="mx-auto" />
+        <Image
+          src="/journve-logo.png"
+          alt="Journve Logo"
+          width={80} // Base size for mobile
+          height={80} // Base size for mobile
+          className="mx-auto md:w-20 md:h-20 lg:w-24 lg:h-24" // Responsive sizes
+        />
         <div className="flex items-center gap-4">
           <Link
             href="https://x.com/journve"
@@ -210,15 +298,18 @@ export default function ComingSoonPage() {
       {/* Main content */}
       <main className="relative z-10 flex flex-col items-center justify-center px-4 py-12 text-center md:px-6 lg:py-24">
         <div className="space-y-6">
-          <p className="max-w-[700px] text-gray-300 md:text-4xl lg:text-5xl font-semibold mt-16">
+          <p className="max-w-[700px] text-gray-300 text-3xl md:text-5xl lg:text-6xl font-semibold mt-16">
             Your Smartest TravelCompanion Awaits.
           </p>
-          <p className="max-w-[700px] text-gray-400 md:text-xl lg:text-2xl">
+          <p className="max-w-[700px] text-gray-400 text-lg md:text-xl lg:text-2xl">
             No chaos. No clutter. Just travel, made simple.
           </p>
+          <p className="max-w-[700px] text-gray-500 text-base md:text-lg lg:text-xl mt-4">
+            Journve will be officially launched soon.
+          </p>
           <Link href="https://journve-v1.vercel.app/" passHref legacyBehavior>
-            <Button className="mt-8 px-10 py-4 text-xl font-bold bg-primary hover:bg-primary/90 text-white rounded-full shadow-xl border-2 border-primary-foreground transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl">
-              Try out our latest version
+            <Button className="mt-8 px-8 py-3 text-lg font-bold bg-primary hover:bg-primary/90 text-white rounded-full shadow-xl border-2 border-primary-foreground transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl md:px-10 md:py-4 md:text-xl">
+              Try out our version 1
             </Button>
           </Link>
 
