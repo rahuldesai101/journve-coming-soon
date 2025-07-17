@@ -1,4 +1,6 @@
-import type { Metadata } from 'next'
+import { ReactNode } from 'react';
+import { Metadata } from 'next';
+import Head from 'next/head';
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -48,10 +50,22 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: ReactNode
 }>) {
   return (
     <html lang="en">
+      <Head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V0F5YB06XQ"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-V0F5YB06XQ');
+          `,
+        }} />
+      </Head>
       <body>{children}</body>
     </html>
   )
