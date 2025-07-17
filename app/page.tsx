@@ -77,7 +77,7 @@ export const metadata = {
     title: "Journve - Your Smartest Travel Companion Awaits",
     description:
       "Journve: No chaos. No clutter. Just travel, made simple. The smartest travel companion app is coming soon!",
-    images: ["/journve-logo.png"],
+    images: ["/journve-logo.jpg"],
   },
   icons: {
     icon: "/icon.png", // Favicon for the browser tab
@@ -93,7 +93,7 @@ export default function ComingSoonPage() {
         {/* Empty div for spacing on the left to help center the logo */}
         <div className="w-20 h-20"></div>
         <Image
-          src="/journve-logo.png"
+          src="/journve-logo.jpg"
           alt="Journve Logo"
           width={80} // Base size for mobile
           height={80} // Base size for mobile
